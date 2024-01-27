@@ -1,7 +1,7 @@
 
+#Extracting Premier League players stats and  displaying in Grafana, via Prometheus 
 
-
-https://github.com/Mrinank-Bhowmick/python-beginner-projects/tree/main/projects/World-Cup-Player-Comparison
+Source data : https://fbref.com/en/comps/9/Premier-League-Stats
 
 
 

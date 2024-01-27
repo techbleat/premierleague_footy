@@ -36,8 +36,8 @@ class CustomCollector(object):
     def collect(self):
         
         #for club in self.team_data_link.keys():
-        liverpool = ["Liverpool", 'Arsenal']
-        for club in liverpool:
+        club_subset = ["Liverpool", 'Arsenal']
+        for club in club_subset:
             time.sleep(3)
             info = requests.get(self.team_data_link[club]).text
             soup = BeautifulSoup(info, "html.parser")
