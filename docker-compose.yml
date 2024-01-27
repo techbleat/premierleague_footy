@@ -1,0 +1,61 @@
+version: "3.7"
+
+services:
+  premierleague-data-exporter:
+    build: ./premierleague-footy
+    image: premierleague-footy
+    ports: 
+      - "8000:8000"
+    networks: 
+      - premierleague-network
+    #env_file: .env
+    expose: 
+      - 8080
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+                    
+  prometheus:
+    build: ./prometheus
+    image: prom/prometheus-footy
+    ports: 
+      - "9090:9090"
+    networks: 
+      - premierleague-network
+    volumes: 
+      - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yaml
+    expose: 
+      - 9090
+    healthcheck:
+      test: ["CMD", "wget", "http://localhost:9090"]
+      interval: 10s
+      timeout: 15s
+      retries: 10
+      start_period: 40s    
+
+  grafana:
+    build: ./grafana
+    image: grafana/grafana-footy
+    ports:
+      - "3000:3000"
+    networks:
+      - premierleague-network
+    depends_on: 
+      prometheus:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 40s         
+
+networks: 
+  premierleague-network:
+ 
+
+
+

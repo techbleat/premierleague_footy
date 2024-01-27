@@ -1,0 +1,706 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "iteration": 1706384712107,
+  "links": [],
+  "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#0a50a1",
+        "#70dbed",
+        "#629e51"
+      ],
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 38,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "starts{name=\"$player\"}",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "{{player}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,5",
+      "title": "Games Start",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#0a50a1",
+        "#70dbed",
+        "#629e51"
+      ],
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 38,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 5,
+        "x": 6,
+        "y": 0
+      },
+      "id": 6,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "goals_scored{name=\"$player\"}",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "{{player}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,5",
+      "title": "Goals Scored",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#0a50a1",
+        "#70dbed",
+        "#629e51"
+      ],
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 38,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 5,
+        "x": 12,
+        "y": 0
+      },
+      "id": 5,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "assists{name=\"$player\"}",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "{{player}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,5",
+      "title": "Assists Made",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#0a50a1",
+        "#70dbed",
+        "#629e51"
+      ],
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 38,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 5,
+        "x": 18,
+        "y": 0
+      },
+      "id": 7,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "minutes_played{name=\"$player\"}",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "{{player}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,5",
+      "title": "Assists Made",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 10
+              },
+              {
+                "color": "yellow",
+                "value": 15
+              },
+              {
+                "color": "purple",
+                "value": 20
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 15,
+        "w": 23,
+        "x": 0,
+        "y": 7
+      },
+      "hideTimeOverride": false,
+      "id": 4,
+      "links": [],
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true
+      },
+      "pluginVersion": "7.0.4",
+      "targets": [
+        {
+          "expr": "starts{club=\"$club\"}",
+          "format": "time_series",
+          "hide": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{name}}",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$club",
+      "type": "bargauge"
+    }
+  ],
+  "schemaVersion": 25,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
+          "text": "Liverpool",
+          "value": "Liverpool"
+        },
+        "datasource": "Prometheus",
+        "definition": "label_values(goals_scored , club)",
+        "hide": 0,
+        "includeAll": false,
+        "label": "club",
+        "multi": false,
+        "name": "club",
+        "options": [
+          {
+            "selected": false,
+            "text": "Arsenal",
+            "value": "Arsenal"
+          },
+          {
+            "selected": true,
+            "text": "Liverpool",
+            "value": "Liverpool"
+          }
+        ],
+        "query": "label_values(goals_scored , club)",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
+          "text": "Ben Doak",
+          "value": "Ben Doak"
+        },
+        "datasource": "Prometheus",
+        "definition": "label_values(goals_scored {club=\"$club\"} , name)",
+        "hide": 0,
+        "includeAll": false,
+        "label": "player",
+        "multi": false,
+        "name": "player",
+        "options": [
+          {
+            "selected": false,
+            "text": "Adrián",
+            "value": "Adrián"
+          },
+          {
+            "selected": false,
+            "text": "Alexis Mac Allister",
+            "value": "Alexis Mac Allister"
+          },
+          {
+            "selected": false,
+            "text": "Alisson",
+            "value": "Alisson"
+          },
+          {
+            "selected": false,
+            "text": "Andrew Robertson",
+            "value": "Andrew Robertson"
+          },
+          {
+            "selected": true,
+            "text": "Ben Doak",
+            "value": "Ben Doak"
+          },
+          {
+            "selected": false,
+            "text": "Bobby Clark",
+            "value": "Bobby Clark"
+          },
+          {
+            "selected": false,
+            "text": "Calum Scanlon",
+            "value": "Calum Scanlon"
+          },
+          {
+            "selected": false,
+            "text": "Caoimhín Kelleher",
+            "value": "Caoimhín Kelleher"
+          },
+          {
+            "selected": false,
+            "text": "Cody Gakpo",
+            "value": "Cody Gakpo"
+          },
+          {
+            "selected": false,
+            "text": "Conor Bradley",
+            "value": "Conor Bradley"
+          },
+          {
+            "selected": false,
+            "text": "Curtis Jones",
+            "value": "Curtis Jones"
+          },
+          {
+            "selected": false,
+            "text": "Darwin Núñez",
+            "value": "Darwin Núñez"
+          },
+          {
+            "selected": false,
+            "text": "Diogo Jota",
+            "value": "Diogo Jota"
+          },
+          {
+            "selected": false,
+            "text": "Dominik Szoboszlai",
+            "value": "Dominik Szoboszlai"
+          },
+          {
+            "selected": false,
+            "text": "Harvey Elliott",
+            "value": "Harvey Elliott"
+          },
+          {
+            "selected": false,
+            "text": "Ibrahima Konaté",
+            "value": "Ibrahima Konaté"
+          },
+          {
+            "selected": false,
+            "text": "James McConnell",
+            "value": "James McConnell"
+          },
+          {
+            "selected": false,
+            "text": "Jarell Quansah",
+            "value": "Jarell Quansah"
+          },
+          {
+            "selected": false,
+            "text": "Joe Gomez",
+            "value": "Joe Gomez"
+          },
+          {
+            "selected": false,
+            "text": "Joël Matip",
+            "value": "Joël Matip"
+          },
+          {
+            "selected": false,
+            "text": "Kaide Gordon",
+            "value": "Kaide Gordon"
+          },
+          {
+            "selected": false,
+            "text": "Kostas Tsimikas",
+            "value": "Kostas Tsimikas"
+          },
+          {
+            "selected": false,
+            "text": "Luis Díaz",
+            "value": "Luis Díaz"
+          },
+          {
+            "selected": false,
+            "text": "Luke Chambers",
+            "value": "Luke Chambers"
+          },
+          {
+            "selected": false,
+            "text": "Marcelo Pitaluga",
+            "value": "Marcelo Pitaluga"
+          },
+          {
+            "selected": false,
+            "text": "Mohamed Salah",
+            "value": "Mohamed Salah"
+          },
+          {
+            "selected": false,
+            "text": "Owen Beck",
+            "value": "Owen Beck"
+          },
+          {
+            "selected": false,
+            "text": "Ryan Gravenberch",
+            "value": "Ryan Gravenberch"
+          },
+          {
+            "selected": false,
+            "text": "Stefan Bajcetic",
+            "value": "Stefan Bajcetic"
+          },
+          {
+            "selected": false,
+            "text": "Trent Alexander-Arnold",
+            "value": "Trent Alexander-Arnold"
+          },
+          {
+            "selected": false,
+            "text": "Trey Nyoni",
+            "value": "Trey Nyoni"
+          },
+          {
+            "selected": false,
+            "text": "Virgil van Dijk",
+            "value": "Virgil van Dijk"
+          },
+          {
+            "selected": false,
+            "text": "Wataru Endo",
+            "value": "Wataru Endo"
+          }
+        ],
+        "query": "label_values(goals_scored {club=\"$club\"} , name)",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "player_dashboard",
+  "uid": "SViXe4tSz",
+  "version": 8
+}

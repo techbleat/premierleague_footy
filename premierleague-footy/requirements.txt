@@ -1,0 +1,7 @@
+pandas
+requests
+BeautifulSoup4
+numpy
+matplotlib 
+uuid
+prometheus_client
