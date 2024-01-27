@@ -3,7 +3,7 @@
 
 Source data : https://fbref.com/en/comps/9/Premier-League-Stats
 
-![target image](img.png)
+![target image](../img.png)
 
 ##Setting Up Requirements on a (Amazon) Linux node ( If you dont want to run on your local PC)
 ```
