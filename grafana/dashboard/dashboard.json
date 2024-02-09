@@ -15,9 +15,47 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1706384712107,
+  "id": 1,
+  "iteration": 1707435687516,
   "links": [],
   "panels": [
+    {
+      "cacheTimeout": null,
+      "content": "\n\n<img src=\"$image\" width=\"300\", height=\"300\">\n\n",
+      "datasource": "Prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 4,
+        "x": 0,
+        "y": 0
+      },
+      "id": 6,
+      "interval": null,
+      "links": [],
+      "maxDataPoints": 100,
+      "mode": "html",
+      "repeat": null,
+      "targets": [
+        {
+          "expr": "goals_scored{player=\"$player\"}",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "title": "$player",
+      "type": "text"
+    },
     {
       "cacheTimeout": null,
       "colorBackground": false,
@@ -43,9 +81,9 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 7,
-        "w": 6,
-        "x": 0,
+        "h": 9,
+        "w": 5,
+        "x": 4,
         "y": 0
       },
       "id": 2,
@@ -82,11 +120,12 @@
         "lineColor": "rgb(31, 120, 193)",
         "show": false
       },
-      "tableColumn": "",
+      "tableColumn": "Bukayo Saka",
       "targets": [
         {
-          "expr": "starts{name=\"$player\"}",
+          "expr": "starts{club=\"$club\", player=\"$player\"}",
           "format": "time_series",
+          "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{player}}",
           "refId": "A"
@@ -130,12 +169,12 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 7,
+        "h": 9,
         "w": 5,
-        "x": 6,
+        "x": 9,
         "y": 0
       },
-      "id": 6,
+      "id": 8,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -169,11 +208,12 @@
         "lineColor": "rgb(31, 120, 193)",
         "show": false
       },
-      "tableColumn": "",
+      "tableColumn": "Bukayo Saka",
       "targets": [
         {
-          "expr": "goals_scored{name=\"$player\"}",
+          "expr": "goals_scored{club=\"$club\", player=\"$player\"}",
           "format": "time_series",
+          "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{player}}",
           "refId": "A"
@@ -217,9 +257,9 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 7,
+        "h": 9,
         "w": 5,
-        "x": 12,
+        "x": 14,
         "y": 0
       },
       "id": 5,
@@ -256,11 +296,12 @@
         "lineColor": "rgb(31, 120, 193)",
         "show": false
       },
-      "tableColumn": "",
+      "tableColumn": "Bukayo Saka",
       "targets": [
         {
-          "expr": "assists{name=\"$player\"}",
+          "expr": "assists{club=\"$club\",player=\"$player\"}",
           "format": "time_series",
+          "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{player}}",
           "refId": "A"
@@ -304,9 +345,9 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 7,
+        "h": 9,
         "w": 5,
-        "x": 18,
+        "x": 19,
         "y": 0
       },
       "id": 7,
@@ -343,18 +384,19 @@
         "lineColor": "rgb(31, 120, 193)",
         "show": true
       },
-      "tableColumn": "",
+      "tableColumn": "Bukayo Saka",
       "targets": [
         {
-          "expr": "minutes_played{name=\"$player\"}",
+          "expr": "minutes_played{club=\"$club\",player=\"$player\"}",
           "format": "time_series",
+          "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{player}}",
           "refId": "A"
         }
       ],
       "thresholds": "0,5",
-      "title": "Assists Made",
+      "title": "Minutes Played",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -397,10 +439,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 15,
-        "w": 23,
+        "h": 21,
+        "w": 24,
         "x": 0,
-        "y": 7
+        "y": 9
       },
       "hideTimeOverride": false,
       "id": 4,
@@ -423,8 +465,9 @@
           "expr": "starts{club=\"$club\"}",
           "format": "time_series",
           "hide": false,
+          "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "{{name}}",
+          "legendFormat": "{{player}}",
           "refId": "A"
         }
       ],
@@ -443,8 +486,8 @@
         "allValue": null,
         "current": {
           "selected": true,
-          "text": "Liverpool",
-          "value": "Liverpool"
+          "text": "Arsenal",
+          "value": "Arsenal"
         },
         "datasource": "Prometheus",
         "definition": "label_values(goals_scored , club)",
@@ -455,12 +498,12 @@
         "name": "club",
         "options": [
           {
-            "selected": false,
+            "selected": true,
             "text": "Arsenal",
             "value": "Arsenal"
           },
           {
-            "selected": true,
+            "selected": false,
             "text": "Liverpool",
             "value": "Liverpool"
           }
@@ -480,11 +523,11 @@
         "allValue": null,
         "current": {
           "selected": true,
-          "text": "Ben Doak",
-          "value": "Ben Doak"
+          "text": "Bukayo Saka",
+          "value": "Bukayo Saka"
         },
         "datasource": "Prometheus",
-        "definition": "label_values(goals_scored {club=\"$club\"} , name)",
+        "definition": "label_values(goals_scored {club=\"$club\"} , player)",
         "hide": 0,
         "includeAll": false,
         "label": "player",
@@ -493,171 +536,188 @@
         "options": [
           {
             "selected": false,
-            "text": "Adrián",
-            "value": "Adrián"
+            "text": "Aaron Ramsdale",
+            "value": "Aaron Ramsdale"
           },
           {
             "selected": false,
-            "text": "Alexis Mac Allister",
-            "value": "Alexis Mac Allister"
+            "text": "Ben White",
+            "value": "Ben White"
           },
           {
             "selected": false,
-            "text": "Alisson",
-            "value": "Alisson"
-          },
-          {
-            "selected": false,
-            "text": "Andrew Robertson",
-            "value": "Andrew Robertson"
+            "text": "Bradley Ibrahim",
+            "value": "Bradley Ibrahim"
           },
           {
             "selected": true,
-            "text": "Ben Doak",
-            "value": "Ben Doak"
+            "text": "Bukayo Saka",
+            "value": "Bukayo Saka"
           },
           {
             "selected": false,
-            "text": "Bobby Clark",
-            "value": "Bobby Clark"
+            "text": "Charles Sagoe Jr",
+            "value": "Charles Sagoe Jr"
           },
           {
             "selected": false,
-            "text": "Calum Scanlon",
-            "value": "Calum Scanlon"
+            "text": "Cédric Soares",
+            "value": "Cédric Soares"
           },
           {
             "selected": false,
-            "text": "Caoimhín Kelleher",
-            "value": "Caoimhín Kelleher"
+            "text": "David Raya",
+            "value": "David Raya"
           },
           {
             "selected": false,
-            "text": "Cody Gakpo",
-            "value": "Cody Gakpo"
+            "text": "Declan Rice",
+            "value": "Declan Rice"
           },
           {
             "selected": false,
-            "text": "Conor Bradley",
-            "value": "Conor Bradley"
+            "text": "Eddie Nketiah",
+            "value": "Eddie Nketiah"
           },
           {
             "selected": false,
-            "text": "Curtis Jones",
-            "value": "Curtis Jones"
+            "text": "Emile Smith Rowe",
+            "value": "Emile Smith Rowe"
           },
           {
             "selected": false,
-            "text": "Darwin Núñez",
-            "value": "Darwin Núñez"
+            "text": "Ethan Nwaneri",
+            "value": "Ethan Nwaneri"
           },
           {
             "selected": false,
-            "text": "Diogo Jota",
-            "value": "Diogo Jota"
+            "text": "Fabio Vieira",
+            "value": "Fabio Vieira"
           },
           {
             "selected": false,
-            "text": "Dominik Szoboszlai",
-            "value": "Dominik Szoboszlai"
+            "text": "Gabriel Dos Santos",
+            "value": "Gabriel Dos Santos"
           },
           {
             "selected": false,
-            "text": "Harvey Elliott",
-            "value": "Harvey Elliott"
+            "text": "Gabriel Jesus",
+            "value": "Gabriel Jesus"
           },
           {
             "selected": false,
-            "text": "Ibrahima Konaté",
-            "value": "Ibrahima Konaté"
+            "text": "Gabriel Martinelli",
+            "value": "Gabriel Martinelli"
           },
           {
             "selected": false,
-            "text": "James McConnell",
-            "value": "James McConnell"
+            "text": "Jakub Kiwior",
+            "value": "Jakub Kiwior"
           },
           {
             "selected": false,
-            "text": "Jarell Quansah",
-            "value": "Jarell Quansah"
+            "text": "Jorginho",
+            "value": "Jorginho"
           },
           {
             "selected": false,
-            "text": "Joe Gomez",
-            "value": "Joe Gomez"
+            "text": "Jurriën Timber",
+            "value": "Jurriën Timber"
           },
           {
             "selected": false,
-            "text": "Joël Matip",
-            "value": "Joël Matip"
+            "text": "Kai Havertz",
+            "value": "Kai Havertz"
           },
           {
             "selected": false,
-            "text": "Kaide Gordon",
-            "value": "Kaide Gordon"
+            "text": "Karl Jakob Hein",
+            "value": "Karl Jakob Hein"
           },
           {
             "selected": false,
-            "text": "Kostas Tsimikas",
-            "value": "Kostas Tsimikas"
+            "text": "Leandro Trossard",
+            "value": "Leandro Trossard"
           },
           {
             "selected": false,
-            "text": "Luis Díaz",
-            "value": "Luis Díaz"
+            "text": "Martin Ødegaard",
+            "value": "Martin Ødegaard"
           },
           {
             "selected": false,
-            "text": "Luke Chambers",
-            "value": "Luke Chambers"
+            "text": "Mohamed Elneny",
+            "value": "Mohamed Elneny"
           },
           {
             "selected": false,
-            "text": "Marcelo Pitaluga",
-            "value": "Marcelo Pitaluga"
+            "text": "Myles Lewis-Skelly",
+            "value": "Myles Lewis-Skelly"
           },
           {
             "selected": false,
-            "text": "Mohamed Salah",
-            "value": "Mohamed Salah"
+            "text": "Oleksandr Zinchenko",
+            "value": "Oleksandr Zinchenko"
           },
           {
             "selected": false,
-            "text": "Owen Beck",
-            "value": "Owen Beck"
+            "text": "Reiss Nelson",
+            "value": "Reiss Nelson"
           },
           {
             "selected": false,
-            "text": "Ryan Gravenberch",
-            "value": "Ryan Gravenberch"
+            "text": "Reuell Walters",
+            "value": "Reuell Walters"
           },
           {
             "selected": false,
-            "text": "Stefan Bajcetic",
-            "value": "Stefan Bajcetic"
+            "text": "Takehiro Tomiyasu",
+            "value": "Takehiro Tomiyasu"
           },
           {
             "selected": false,
-            "text": "Trent Alexander-Arnold",
-            "value": "Trent Alexander-Arnold"
+            "text": "Thomas Partey",
+            "value": "Thomas Partey"
           },
           {
             "selected": false,
-            "text": "Trey Nyoni",
-            "value": "Trey Nyoni"
-          },
-          {
-            "selected": false,
-            "text": "Virgil van Dijk",
-            "value": "Virgil van Dijk"
-          },
-          {
-            "selected": false,
-            "text": "Wataru Endo",
-            "value": "Wataru Endo"
+            "text": "William Saliba",
+            "value": "William Saliba"
           }
         ],
-        "query": "label_values(goals_scored {club=\"$club\"} , name)",
+        "query": "label_values(goals_scored {club=\"$club\"} , player)",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "https://fbref.com/req/202302030/images/headshots/7a2e46a8_2022.jpg",
+          "value": "https://fbref.com/req/202302030/images/headshots/7a2e46a8_2022.jpg"
+        },
+        "datasource": "Prometheus",
+        "definition": "label_values(goals_scored {club=\"$club\" , player=\"$player\"} ,image)",
+        "hide": 2,
+        "includeAll": false,
+        "label": "image",
+        "multi": false,
+        "name": "image",
+        "options": [
+          {
+            "selected": true,
+            "text": "https://fbref.com/req/202302030/images/headshots/7a2e46a8_2022.jpg",
+            "value": "https://fbref.com/req/202302030/images/headshots/7a2e46a8_2022.jpg"
+          }
+        ],
+        "query": "label_values(goals_scored {club=\"$club\" , player=\"$player\"} ,image)",
         "refresh": 0,
         "regex": "",
         "skipUrlSync": false,
@@ -671,12 +731,11 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [
-      "5s",
       "10s",
       "30s",
       "1m",
@@ -702,5 +761,5 @@
   "timezone": "",
   "title": "player_dashboard",
   "uid": "SViXe4tSz",
-  "version": 8
+  "version": 6
 }
